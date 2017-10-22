@@ -1,0 +1,46 @@
+{
+  "name": "webtask-house-scraper",
+  "version": "0.1.0",
+  "description": "House scrapper",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node src/index",
+    "dev": "nodemon src/index",
+    "prepush": "node -r dotenv/config node_modules/.bin/mocha",
+    "test": "nodemon -r dotenv/config --exec mocha --watch",
+    "coverage": "nyc --require dotenv/config --reporter=html mocha --timeout=3000"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --trailing-comma none --single-quote --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --trailing-comma none --write",
+      "git add"
+    ]
+  },
+  "author": "Hector Yeomans <yeomans.leonel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "3.5.1",
+    "cheerio": "1.0.0-rc.2",
+    "request": "2.83.0",
+    "request-promise": "4.2.2"
+  },
+  "devDependencies": {
+    "dotenv": "4.0.0",
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "husky": "0.14.3",
+    "lint-staged": "4.3.0",
+    "mocha": "4.0.1",
+    "nodemon": "1.12.1",
+    "nyc": "11.2.1",
+    "prettier": "1.7.4",
+    "sinon": "4.0.1"
+  }
+}
