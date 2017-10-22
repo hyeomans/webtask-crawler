@@ -5,10 +5,9 @@ const prefixUrl = 'https://www.kwnext.mx/';
 const caracteristicas = '.row .fila_caracteristicas';
 
 module.exports = requestPromise => {
-  return slug => {
-    const uri = `${prefixUrl}/${slug}`;
+  return ({ title, link }) => {
     const options = {
-      uri
+      link
     };
 
     return requestPromise(options)
@@ -20,7 +19,8 @@ module.exports = requestPromise => {
         const precio = getPrecio($printableArea);
 
         return {
-          slug,
+          title,
+          link,
           id,
           precio,
           caracteristicas: current

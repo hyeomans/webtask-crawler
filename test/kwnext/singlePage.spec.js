@@ -17,11 +17,18 @@ describe('SinglePage tests', () => {
       const singlePageMock = readFile(mockPath, 'utf8');
       const requestPromise = sinon.stub().returns(singlePageMock);
       const sut = singlePage(requestPromise);
-      const result = sut('slug-with-terreno');
+      const input = {
+        title: 'SE RENTA CASA EN FRACCIONAMIENTO LOS VIÑEDOS',
+        link:
+          'https://www.kwnext.mx/propiedades/se-vende-casa-en-fraccionamiento-los-vinedos-973'
+      };
+
+      const result = sut(input);
 
       return result.then(r => {
         expect(r).to.eql({
-          slug: 'slug-with-terreno',
+          title: input.title,
+          link: input.link,
           id: 'knNextId:1033781',
           precio: '$25,000 MXN',
           caracteristicas: [
