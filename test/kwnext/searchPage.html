@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bienvenidos | KWNext Bienes Raices</title>
+	<meta name="Keywords" content="">
+	<meta name="Description" content=""/>
+
+	<!-- ogp.me -->
+	<meta property="og:title" content="KWNext Bienes Raices" />
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://kwnext.mx/"
+
+	<!-- CSS -->
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/styles.css" rel="stylesheet">
+	<link href="/css/queries.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+	<script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="//s3.amazonaws.com/menumaker/menumaker.min.js" type="text/javascript"></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+	<script src="/js/menu.js"></script>
+	<link rel="stylesheet" href="/css/menu.css">
+	<link rel="shortcut icon" href="//www.kwmexico.mx/custom/2003/images/favicon.ico" />
+
+	<!-- CHOSEN - SELECT INPUT AUTOCOMPLETE -->
+	<script src="/js/chosen.jquery.js"></script>
+	<link rel="stylesheet" href="/css/chosen.css">
+	<link rel="stylesheet" href="/css/custom-website.css">
+
+	<!-- FACEBOX -->
+	<link rel="stylesheet" href="/css/facebox.css">
+	<!-- <script src='http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyDxt913cfRjcXIVAJB5uOU68YwMXknWUj4&libraries=drawing&dummy=.js' type='text/javascript'></script> -->
+	<style>
+		.btn-primary:focus{
+			background-color: #c53535;
+		}
+	</style>
+
+	<link href="/assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet">
+<style>
+	/** Select 2 */
+    .select2-container--default .select2-selection--single {
+        background-color: #fafafa;
+        border: 1px solid #eee;
+        border-radius: 2px;
+        height: auto;
+        padding: 3px 0;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+        color: #8c8c8c;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+        height: 34px;
+        top: 1px;
+        opacity: 0.7;
+    }
+    .select2-dropdown{
+        border: 1px solid #eee;
+        color: #8c8c8c;
+        border-radius: 2px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        z-index: 100;
+    }
+	.propiedades .col-md-6{
+		padding: 0;
+	}
+	.btn-default {
+		background: #6d6d6d;
+		color: #ffffff;
+		border-radius: 0px;
+		border: 0px;
+		font-size: 13px;
+		transition: all 0.3s;
+		-webkit-transition: all 0.2s;
+	}
+
+	#filtro input[type=radio]{
+		margin: 0 5px 0 0;
+	}
+
+	#filtro .input_radio label{
+		position: relative;
+		top:-2px;
+		cursor: pointer;
+	}
+
+	.form-control
+	{
+		border-radius: 0px !important;
+		border-color: #e6e6e6 !important;
+		box-shadow: none !important;
+	}
+
+	.right{
+		text-align: right;
+	}
+
+	.left{
+		text-align: left;
+	}
+	.center{
+		text-align: center;
+	}
+
+	.vhidden{
+		visibility: hidden;
+	}
+
+	.min-height-34{
+		min-height: 34px;
+	}
+
+	.filter_show{
+		position: relative;
+		top:0px;
+		color: #444;
+		display: inline-block;
+		width: 37px;
+		height: 38px;
+		text-align: center;
+	}
+
+	.padding-right-5{
+		padding-right: 5px !important;
+	}
+
+	.padding-left-5{
+		padding-left: 5px !important;
+	}
+
+	.padding-top-15{
+		padding-top: 15px;
+	}
+
+	.margin-top-5{
+		margin-top: 5px;
+	}
+
+	.margin-bottom-20{
+		margin-bottom: 20px;
+	}
+
+	#filtro .btn-primary
+	{
+		font-weight: 700;
+		font-size: 14px;
+	}
+
+	input[type="radio"] {
+		display: none;
+	}
+
+	input[type="radio"] + label {
+		color: #292321;
+		font-size: 14px;
+	}
+
+	input[type="radio"] + label span {
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		margin: -2px 7px 0 0;
+		vertical-align: middle;
+		cursor: pointer;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+	}
+
+	input[type="radio"] + label span {
+		background-color: #6d6d6d;
+	}
+
+	input[type="radio"]:checked + label span {
+		background-color: #fb4444;
+	}
+
+	input[type="radio"] + label span,
+	input[type="radio"]:checked + label span {
+		-webkit-transition: background-color 0.4s linear;
+		-o-transition: background-color 0.4s linear;
+		-moz-transition: background-color 0.4s linear;
+		transition: background-color 0.4s linear;
+	}
+
+	label
+	{
+		font-weight: 600 !important;
+		color: #5d5d5d !important;
+	}
+
+	input[type=checkbox] {
+		opacity: 0;
+		float:left;
+	}
+
+	input[type=checkbox] + label {
+		margin: 4px 0px 0px 20px;
+		position: relative;
+		cursor: pointer;
+		float: left;
+		font-weight: 500 !important;
+	}
+
+	input[type=checkbox] + label ~ label {
+		margin: 0 0 0 40px;
+	}
+
+	input[type=checkbox] + label::before {
+		content: ' ';
+		position: absolute;
+		left: -32px;
+		top: -3px;
+		width: 20px;
+		height: 20px;
+		display: block;
+		background: white;
+		border: 1px solid #e6e6e6;
+	}
+
+	input[type=checkbox] + label::after {
+		content: ' ';
+		position: absolute;
+		left: -30px;
+		top: -1px;
+		width: 14px;
+		height: 14px;
+		display: block;
+		z-index: 1;
+		background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjE4MS4yIDI3MyAxNyAxNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxODEuMiAyNzMgMTcgMTYiPjxwYXRoIGQ9Ik0tMzA2LjMgNTEuMmwtMTEzLTExM2MtOC42LTguNi0yNC04LjYtMzQuMyAwbC01MDYuOSA1MDYuOS0yMTIuNC0yMTIuNGMtOC42LTguNi0yNC04LjYtMzQuMyAwbC0xMTMgMTEzYy04LjYgOC42LTguNiAyNCAwIDM0LjNsMjMxLjIgMjMxLjIgMTEzIDExM2M4LjYgOC42IDI0IDguNiAzNC4zIDBsMTEzLTExMyA1MjQtNTI0YzctMTAuMyA3LTI1LjctMS42LTM2eiIvPjxwYXRoIGZpbGw9IiMzNzM3MzciIGQ9Ik0xOTcuNiAyNzcuMmwtMS42LTEuNmMtLjEtLjEtLjMtLjEtLjUgMGwtNy40IDcuNC0zLjEtMy4xYy0uMS0uMS0uMy0uMS0uNSAwbC0xLjYgMS42Yy0uMS4xLS4xLjMgMCAuNWwzLjMgMy4zIDEuNiAxLjZjLjEuMS4zLjEuNSAwbDEuNi0xLjYgNy42LTcuNmMuMy0uMS4zLS4zLjEtLjV6Ii8+PHBhdGggZD0iTTExODcuMSAxNDMuN2wtNTYuNS01Ni41Yy01LjEtNS4xLTEyLTUuMS0xNy4xIDBsLTI1My41IDI1My41LTEwNi4yLTEwNi4yYy01LjEtNS4xLTEyLTUuMS0xNy4xIDBsLTU2LjUgNTYuNWMtNS4xIDUuMS01LjEgMTIgMCAxNy4xbDExNC43IDExNC43IDU2LjUgNTYuNWM1LjEgNS4xIDEyIDUuMSAxNy4xIDBsNTYuNS01Ni41IDI2Mi0yNjJjNS4yLTMuNCA1LjItMTIgLjEtMTcuMXpNMTYzNC4xIDE2OS40bC0zNy43LTM3LjdjLTMuNC0zLjQtOC42LTMuNC0xMiAwbC0xNjkuNSAxNjkuNS03MC4yLTcxLjljLTMuNC0zLjQtOC42LTMuNC0xMiAwbC0zNy43IDM3LjdjLTMuNCAzLjQtMy40IDguNiAwIDEybDc3LjEgNzcuMSAzNy43IDM3LjdjMy40IDMuNCA4LjYgMy40IDEyIDBsMzcuNy0zNy43IDE3NC43LTE3Ni40YzEuNi0xLjcgMS42LTYuOS0uMS0xMC4zeiIvPjwvc3ZnPg==') no-repeat center center;
+		-ms-transition: all .2s ease;
+		-webkit-transition: all .2s ease;
+		transition: all .3s ease;
+		-ms-transform: scale(0);
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	input[type=checkbox]:checked + label::after {
+		-ms-transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+
+
+	@media (max-width: 992px) {
+		#filtro .right,
+		#filtro .left,
+		#filtro .center{
+			text-align: inherit;
+		}
+		.padding-right-5{
+			padding-right: 0 !important;
+		}
+
+		.padding-left-5{
+			padding-left: 0 !important;
+		}
+		.padding-top-15{
+			padding-top:  0 !important;
+		}
+	}
+
+	/*Paginacion*/
+
+	.pagination{
+		display: table;
+		margin: 0 auto;
+		padding-top: 15px;
+	}
+
+	.pagination>li>a{
+		color: #fb4444;
+		background-color: #f2f2f2;
+		border: none;
+	}
+
+	.pagination>li:first-child>a,
+	.pagination>li:last-child>a{
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.pagination>li>a:focus,
+	.pagination>li>a:hover,
+	.pagination>li>a.active{
+		color: #ffffff;
+		background-color: #fb4444;
+	}
+</style>
+<!-- Range -->
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<script src="/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+</head>
+<body>
+	
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-4 text_center_mobile">
+					<a href="https://www.kwnext.mx"><img src="/img/logo.png" alt="KW" id="logo" /></a>
+		  		</div>
+				<div class="col-sm-9 col-md-8">				
+					<div id="cssmenu" style="position: relative; z-index:999;">
+						<ul>
+							<li><a href="https://www.kwnext.mx/nosotros" class="">NOSOTROS</a></li>
+							<li ><a href="https://www.kwnext.mx/propiedades" class="current">PROPIEDADES</a></li>
+							<li ><a href="https://www.kwnext.mx/agentes" class="">AGENTES</a></li>
+							<li ><a href="https://www.kwnext.mx/contacto" class="">CONTACTO</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="clear"></div>
+	<div class="header_secciones">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">Todos los tipos de propiedades en venta</div>
+		</div>
+	</div>
+</div>
+<div class="fondo_gris">
+	<div class="container" style="overflow-x: hidden;">
+		<div class="row mt_10">
+			<div class="col-md-12">
+				<form action="https://www.kwnext.mx/propiedades" method="GET" id="filtro">
+	<input type="hidden" name="f" value="1">
+	<div class="row">
+		<!--fila 1-->
+		<div class="col-md-12">
+				<br>
+				<ul class="list-inline text-center">
+				<li style="padding-left: 10px;padding-right: 10px;">
+					<div class="form-group">
+						<input type="radio" name="operation" id="compra" value="1"
+						 >
+						<label for="compra" style="cursor:pointer"><span></span>Venta</label>
+					</div>
+				</li>
+				<li style="padding-left: 10px;padding-right: 10px;">
+					<div class="form-group">
+						<input type="radio" name="operation" id="renta" value="2"
+						checked >
+						<label for="renta" style="cursor:pointer"><span></span>Renta</label>
+				  	</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+				<select class="form-control" name="city_id" id="ciudad_select">
+					<option value="">Ciudad</option>
+										<option value="1"
+					selected >Hermosillo</option>
+										<option value="2"
+					 >Cajeme</option>
+										<option value="3"
+					 >Guaymas</option>
+										<option value="4"
+					 >San Luis Río Colorado</option>
+										<option value="5"
+					 >Magdalena</option>
+										<option value="6"
+					 >Nogales</option>
+										<option value="7"
+					 >Ures</option>
+										<option value="8"
+					 >San Miguel De Horcasitas</option>
+										<option value="9"
+					 >Puerto Peñasco</option>
+										<option value="10"
+					 >Kino</option>
+										<option value="11"
+					 >Empalme</option>
+										<option value="12"
+					 >Navojoa</option>
+										<option value="13"
+					 >Huatabampo</option>
+										<option value="14"
+					 >Banamichi</option>
+									</select>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+				<select class="form-control" name="sector_id" id="sector_select">
+					<option value="">Sector</option>
+										<option value="1"
+					 >Norte</option>
+										<option value="2"
+					 >Poniente</option>
+										<option value="3"
+					 >Centro</option>
+										<option value="4"
+					 >Sur</option>
+										<option value="5"
+					 >Oriente</option>
+									</select>
+			</div>
+		</div><!-- sector -->
+		<div class="col-md-3"> <!-- colonia -->
+			<div class="form-group">
+			   <select data-value="" class="form-control" name="neighborhood_id" id="colonia_select">
+				   <option value="" selected>Colonia</option>
+			   </select>
+			</div>
+		</div><!-- colonia -->
+		<div class="col-md-3">
+			<div class="form-group">
+				<select name="type_id" class="form-control" id="tipo_select">
+					<option value="">Tipo de propiedad</option>
+										<option value="Residenciales"
+					selected >Residenciales</option>
+										<option value="Departamento"
+					 >Departamento</option>
+										<option value="Locales y Oficinas"
+					 >Locales y Oficinas</option>
+										<option value="Bodegas"
+					 >Bodegas</option>
+										<option value="Terrenos"
+					 >Terrenos</option>
+										<option value="Otros"
+					 >Otros</option>
+										<option value="Ranchos y Campos"
+					 >Ranchos y Campos</option>
+									  
+				</select>
+			</div>
+		</div><!-- tipo de propiedad -->
+		<div class="col-md-6">
+			<!-- rango -->
+			
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<input type="text" class="form-control" value="" placeholder="Precio mínimo" name="price_mxn_min" id="min_price">
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<input type="text" class="form-control" value="" placeholder="Precio máximo" name="price_mxn_max" id="max_price">
+					</div>
+				</div>
+			</div>					
+			
+			<!-- inputs hidden para mandar los precios a la busqueda-->
+			
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<select name="price_order" class="form-control" id="price_order">
+							<option value="">Ordernar por</option>
+							<option value="desc"
+							>Precio Descendente</option>
+							<option value="asc"
+							>Precio Ascendente</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<p>
+						<a class="btn btn-default btn-lg btn-block" href="https://www.kwnext.mx/propiedades">Restablecer</a>
+					</p>
+				</div>
+				<div class="col-md-4">
+					<p>
+						<button style="font-size: 13px;" type="submit" class="btn btn-primary btn-lg btn-block">Búsqueda</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div><!-- row -->
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+<script>
+	$('input[name="price_mxn_min"]').mask("#,##0.00", {reverse: true});
+    $('input[name="price_mxn_max"]').mask("#,##0.00", {reverse: true});
+</script>			</div>
+		</div>
+		<div class="row mt_10 mb_10">
+
+						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/rento-casa-un-piso-cerrada-real-del-llano-12">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/4c12c7ae-8be6-4cd8-a271-064cdc89b116-c8997c6d-980c-4ef3-b512-72a58586069b.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="RENTO CASA UN PISO CERRADA REAL DEL LLANO">
+			<span class="listing-title">RENTO CASA UN PISO CERRADA REAL DEL LLANO</span>
+			<p style="margin:0;height:41px;">
+				Real Del Llano  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$4,500 MXN</div>
+								<div class="col-xs-6 text-right">$238 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+					
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/rento-casa-un-piso-cerrada-real-del-llano-12" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-rentan-oficinas-al-norte-de-la-ciudad-32">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/cdafa717-5c34-4ac9-8c45-1058c0b27398-2d955f81-914a-414b-a230-d11900092770.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se Rentan Oficinas al Norte de la Ciudad">
+			<span class="listing-title">Se Rentan Oficinas al Norte de la Ciudad</span>
+			<p style="margin:0;height:41px;">
+				Carretera a Nogales  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$3,000 MXN</div>
+								<div class="col-xs-6 text-right">$3,000 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+									<img title="Área del terreno" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"  /> 9959.0 m2
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+					
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-rentan-oficinas-al-norte-de-la-ciudad-32" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/renta-residencia-en-corceles-residencial-89">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/0ecc8b55-019f-4abd-8ee0-30d9b0c4837e-6a6a69f7-e5c3-432d-a289-c7eca66b24db.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Renta residencia en Corceles Residencial">
+			<span class="listing-title">Renta residencia en Corceles Residencial</span>
+			<p style="margin:0;height:41px;">
+				Corceles Residencial  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$17,000 MXN</div>
+								<div class="col-xs-6 text-right">$895 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+									<img title="Área del terreno" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"  /> 324.0 m2
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+										<span title="Baños" data-toggle="tooltip">
+						<img src="/img/iconos/3.png" class="iconos" /> 2.0
+					</span>
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 3
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/renta-residencia-en-corceles-residencial-89" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/casa-habitacion-ideal-para-oficina-119">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/0d0b991d-11b4-4272-b8bb-4067ca09f142-296fd016-8e85-4191-aeb1-b22c0f37df7e.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Casa habitación ideal para oficina.">
+			<span class="listing-title">Casa habitación ideal para oficina.</span>
+			<p style="margin:0;height:41px;">
+				Centro  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$40,000 MXN</div>
+								<div class="col-xs-6 text-right">$2,106 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+									<img title="Área del terreno" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"  /> 1000.0 m2
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+										<span title="Estacionamientos" data-toggle="tooltip">
+						<img src="/img/iconos/2.png" class="iconos" /> 17
+					</span>
+					
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 13
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/casa-habitacion-ideal-para-oficina-119" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-rentan-locales-en-villa-de-seris-130">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/f964a314-0263-40c9-a5cb-463b79edc820-adbab08a-30a2-4620-bb70-789453d68d58.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se rentan locales en villa de seris">
+			<span class="listing-title">Se rentan locales en villa de seris</span>
+			<p style="margin:0;height:41px;">
+				Villa de Seris  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$5,000 MXN</div>
+								<div class="col-xs-6 text-right">$283 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+					
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-rentan-locales-en-villa-de-seris-130" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-renta-terreno-en-blvd-colosio-216">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/c8a3bc8e-9732-4cc1-92eb-7d29cb519f53-d3f4ab68-3fa7-4090-9ef6-2cfe242f6646.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se Renta Terreno en Blvd. Colosio">
+			<span class="listing-title">Se Renta Terreno en Blvd. Colosio</span>
+			<p style="margin:0;height:41px;">
+				Luis Donaldo Colosio  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$50 MXN</div>
+								<div class="col-xs-6 text-right">$3 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+									<img title="Área del terreno" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"  /> 30000.0 m2
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+					
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-renta-terreno-en-blvd-colosio-216" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-renta-departamento-221">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/30a7f4a3-2a13-41e5-8cdb-7e51be4a6b0c-36db1b77-3c8c-4697-ae18-42e4d9da3f10.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se renta departamento.">
+			<span class="listing-title">Se renta departamento.</span>
+			<p style="margin:0;height:41px;">
+				Villa Satélite  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$5,000 MXN</div>
+								<div class="col-xs-6 text-right">$278 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+										<span title="Estacionamientos" data-toggle="tooltip">
+						<img src="/img/iconos/2.png" class="iconos" /> 1
+					</span>
+					
+										<span title="Baños" data-toggle="tooltip">
+						<img src="/img/iconos/3.png" class="iconos" /> 1.0
+					</span>
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 1
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-renta-departamento-221" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-rentan-locales-para-oficina-en-col-centenario-223">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/cd04125e-097f-45f8-909b-7ecb118cb898-42fb4ee5-9c89-4dd9-838c-1dd56eaee25e.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se Renta Edifico con oficinas en Col. Centenario">
+			<span class="listing-title">Se Renta Edifico con oficinas en Col. Centenario</span>
+			<p style="margin:0;height:41px;">
+				Centenario  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$70,000 MXN</div>
+								<div class="col-xs-6 text-right">$3,956 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+									<img title="Área del terreno" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"  /> 350.2 m2
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 1
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-rentan-locales-para-oficina-en-col-centenario-223" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-renta-oficina-en-grand-kino-275">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/32442229-ac92-40d8-9594-9ed5b51bcb55-66583bce-0c8c-4622-bfef-4a5645d1d098.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se renta oficina en Grand Kino.">
+			<span class="listing-title">Se renta oficina en Grand Kino.</span>
+			<p style="margin:0;height:41px;">
+				Grand Kino  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$22,000 MXN</div>
+								<div class="col-xs-6 text-right">$1,158 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+													<img  title="Área de construcción" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"/> 45.7 m2
+												
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 1
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-renta-oficina-en-grand-kino-275" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-renta-departamento-en-fraccionamiento-villas-del-cortes-280">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/9fecadae-30b4-4688-b827-a08c65f77ef5-a0b98054-ae40-4db2-a30a-6fd9d9dd8c49.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se renta departamento en fraccionamiento Villas del Cortes.">
+			<span class="listing-title">Se renta departamento en fraccionamiento Villas del Cortes.</span>
+			<p style="margin:0;height:41px;">
+				Fraccionamiento Villas Del Cortes  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$3,500 MXN</div>
+								<div class="col-xs-6 text-right">$184 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+										<span title="Baños" data-toggle="tooltip">
+						<img src="/img/iconos/3.png" class="iconos" /> 1.0
+					</span>
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 1
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-renta-departamento-en-fraccionamiento-villas-del-cortes-280" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-renta-local-en-balderrama-357">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/5f26673d-5f81-4880-9f9d-cdf9f6f0603a-507ec450-8141-46fb-8ad7-3af3556c0f29.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se renta local en Balderrama.">
+			<span class="listing-title">Se renta local en Balderrama.</span>
+			<p style="margin:0;height:41px;">
+				Balderrama  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$7,900 MXN</div>
+								<div class="col-xs-6 text-right">$416 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+									<img title="Área del terreno" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"  /> 284.0 m2
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+										<span title="Estacionamientos" data-toggle="tooltip">
+						<img src="/img/iconos/2.png" class="iconos" /> 3
+					</span>
+					
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 1
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-renta-local-en-balderrama-357" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/2-locales-en-renta-ubicados-en-colonia-centro-359">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/bf12c52c-3ebf-400d-8495-cf068d92f24b-f2ee4fc1-859e-4f74-8dd6-18250832718e.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="2 Locales en Renta Ubicados en Colonia Centro">
+			<span class="listing-title">2 Locales en Renta Ubicados en Colonia Centro</span>
+			<p style="margin:0;height:41px;">
+				Centro  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$37,500 MXN</div>
+								<div class="col-xs-6 text-right">$1,974 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+										<span title="Estacionamientos" data-toggle="tooltip">
+						<img src="/img/iconos/2.png" class="iconos" /> 6
+					</span>
+					
+					
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/2-locales-en-renta-ubicados-en-colonia-centro-359" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/casa-en-renta-en-real-del-sevilla-388">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/9ae9103d-68c1-4ec5-ba16-dad354bd383f-cde9bfbc-7afa-47b9-8b19-bb314e55e5d9.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Casa en Renta en Real del Sevilla">
+			<span class="listing-title">Casa en Renta en Real del Sevilla</span>
+			<p style="margin:0;height:41px;">
+				La Manga  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$13,500 MXN</div>
+								<div class="col-xs-6 text-right">$711 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+									<img title="Área del terreno" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"  /> 152.0 m2
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+					
+					
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/casa-en-renta-en-real-del-sevilla-388" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-renta-casa-en-puerta-real-394">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/ead55f34-54fb-487d-a7ef-dce7dc537833-1a207992-430b-415c-a867-0aac6ae9bb70.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se Renta Casa en Puerta Real">
+			<span class="listing-title">Se Renta Casa en Puerta Real</span>
+			<p style="margin:0;height:41px;">
+				Puerta Real  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$4,300 MXN</div>
+								<div class="col-xs-6 text-right">$236 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+										<span title="Estacionamientos" data-toggle="tooltip">
+						<img src="/img/iconos/2.png" class="iconos" /> 2
+					</span>
+					
+										<span title="Baños" data-toggle="tooltip">
+						<img src="/img/iconos/3.png" class="iconos" /> 1.0
+					</span>
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 2
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-renta-casa-en-puerta-real-394" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>						<div class="col-lg-4 col-md-6 col-sm-6">
+	<div class="propiedad_listado listing-grid-item">
+				<a href="https://www.kwnext.mx/propiedades/se-renta-casa-en-lomas-altas-409">
+					<img src="https://kwstatic.azureedge.net/images/2003/L/WM/Large/31668960-ceb8-4a0d-b49b-e65be3ca50fb-e6f4d39f-7679-4590-9da5-1301e366a905.jpg" alt="" class="img_full" /> <!-- foto principal -->
+		</a>
+		<div class="descripcion_propiedad_listado" title="Se Renta Casa en Lomas Altas">
+			<span class="listing-title">Se Renta Casa en Lomas Altas</span>
+			<p style="margin:0;height:41px;">
+				Lomas Altas  / 
+				Hermosillo / 
+				Sonora 
+			</p>
+			<div class="row">
+				<div class="col-xs-6" style="font-weight: 600;">$25,000 MXN</div>
+								<div class="col-xs-6 text-right">$1,316 USD</div>
+							</div>
+			<div class="row bottom">
+				<div class="col-xs-7">
+									<img title="Área del terreno" data-toggle="tooltip" src="/img/iconos/1.png" class="iconos"  /> 382.0 m2
+																
+				</div>
+
+				<div class="col-xs-5 text-right">
+										<span title="Estacionamientos" data-toggle="tooltip">
+						<img src="/img/iconos/2.png" class="iconos" /> 2
+					</span>
+					
+										<span title="Baños" data-toggle="tooltip">
+						<img src="/img/iconos/3.png" class="iconos" /> 4.0
+					</span>
+					
+										<span title="Recámaras" data-toggle="tooltip">
+						<img src="/img/iconos/4.png" class="iconos" /> 4
+					</span>
+									</div>
+			</div>
+			<hr />
+			<div class="text-right">
+								<a href="https://www.kwnext.mx/propiedades/se-renta-casa-en-lomas-altas-409" class="btn btn-primary">
+									VER MÁS
+				</a> 
+			</div>
+		</div>
+	</div>
+</div>			
+			<div class="col-sm-12">
+				<ul class="pagination">
+        
+                    <li class="disabled"><span>&laquo;</span></li>
+        
+        
+                    
+            
+            
+                                                                        <li class="active"><span>1</span></li>
+                                                                                <li><a href="https://www.kwnext.mx//propiedades?f=1&amp;operation=2&amp;city_id=1&amp;type_id=Residenciales&amp;page=2">2</a></li>
+                                                                                <li><a href="https://www.kwnext.mx//propiedades?f=1&amp;operation=2&amp;city_id=1&amp;type_id=Residenciales&amp;page=3">3</a></li>
+                                                                                <li><a href="https://www.kwnext.mx//propiedades?f=1&amp;operation=2&amp;city_id=1&amp;type_id=Residenciales&amp;page=4">4</a></li>
+                                                        
+        
+                    <li><a href="https://www.kwnext.mx//propiedades?f=1&amp;operation=2&amp;city_id=1&amp;type_id=Residenciales&amp;page=2" rel="next">&raquo;</a></li>
+            </ul>
+
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="clear"></div>
+	<div class="linea_gris"></div>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 text_center_mobile">
+					<h3>¿Dónde encontrarnos?</h3>
+					<p>Tabasco Nte. #18 Esq. Rio Yaqui</p>
+					<p>Col. Modelo CP 83190</p>			
+					
+				</div>
+				<div class="col-sm-4 text_center_mobile">
+					<h3>Contacto</h3>
+					Tel: <a href="tel:6622104666" style="color:#666666;">(662) 210 4666</a><br />
+					<a href="mailto:recepcion@nextbienesraices.com" style="color:#666666;">recepcion@nextbienesraices.com</a>
+					<br><br>	
+					
+					<div class="fb-page" data-href="//www.facebook.com/kwnextbienesraices/" data-tabs="timeline" data-height="70" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="//www.facebook.com/kwnextbienesraices/" class="fb-xfbml-parse-ignore"><a href="//www.facebook.com/kwnextbienesraices/">KW NEXT</a></blockquote></div>
+				</div>
+				<div class="col-sm-4 text_center_mobile">
+					<h3>Escríbenos</h3>
+					<p>¿Tienes dudas?</p>
+					<p>¡Las resolvemos con gusto!</p>			
+					<a href="https://www.kwnext.mx/contacto" class="btn btn-secondary"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+						<div>Enviar Mensaje</div>
+						<div class="clear"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div id="copy">KWNEXT<br />Todos los derechos reservados</div>
+	<script src="/assets/plugins/select2/dist/js/select2.js"></script>
+<script>
+	function limpiar() {
+		$("#filtro input").val("");
+		$("#filtro select").val("");
+		$("#filtro input").prop('checked', false);
+	}
+	var aplicados = [];
+	$($("#filtro").serialize().split('&')).each(function(){
+		var f = this.split('=');
+		if (f[1] != "") {
+			aplicados.push(this);
+		}
+	});
+
+	if (aplicados.length <= 1) {
+		$('.ocultar').addClass("hidden");
+	} else {
+		$('.ocultar').removeClass("hidden");
+	}
+	$(function () {
+		$("#sector_select").select2();
+		$("#ciudad_select").select2();
+		$("#colonia_select").select2();
+		$('#tipo_select').select2();
+		$('#price_order').select2();
+
+		$('label').click(function () {
+			$('label').removeClass('selected');
+			$(this).addClass('selected');
+		});
+
+		$("#ciudad_select").change(function () {
+
+			$("#ciudad_select option:selected").each(function () {
+				var city_id = $(this).val();
+				var colonia_select = $("#colonia_select");
+
+				if (city_id != '') {
+					$.get('https://www.kwnext.mx/ajax/neighborhoods/' + city_id , function(data){
+						var opts = '<option value="">Colonia</option>';
+						var selected = colonia_select.attr('data-value');
+
+						$.each(data, function() {
+
+							if(parseInt(selected) == this.id) {
+								opts += '<option value="'+this.id+'" selected>'+this.name+'</option>';
+								colonia_select.removeAttr('data-value');
+							} else {
+								opts += '<option value="'+this.id+'">'+this.name+'</option>';
+							}
+
+						});
+						
+						colonia_select.html(opts);
+						colonia_select.trigger("change");
+					});
+				}
+
+			});
+
+		});
+
+		$( "#slider-range" ).slider({
+			step: 1000,
+			range: true,
+			min: 5.00, //min price
+			max: 99999999.99, //max price
+			values: [
+				5.00, 
+				99999999.99
+			], 
+			slide: function( event, ui ) {
+				if( ui.values[0] == 0 ){ // min price
+					$("#min_price").val( '' );
+				}else{
+					var minPrice = $("#min_price").val( ui.values[0] );
+				}
+
+				if( ui.values[1] == 1000 ){ // max price
+					$("#max_price").val( '' );
+				}else{
+					var maxPrice = $("#max_price").val( ui.values[1] );
+				}
+
+				var val0 = numeral( ui.values[0] ).format('$0,0');
+				var val1 = numeral( ui.values[1] ).format('$0,0');
+				$( "#amount" ).val( val0 + " - " + val1 );
+			}
+		});
+		
+		$( "#amount" ).val( numeral( $( "#slider-range" ).slider( "values", 0 ) ).format('$0,0') +
+			" - " + numeral( $( "#slider-range" ).slider( "values", 1 ) ).format('$0,0') );
+
+		$("#ciudad_select").change();
+
+
+	});
+</script>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=495601253920994";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script src="/js/facebox.js"></script>
+	<script>
+		$(function(){
+			$.facebox.settings.closeImage = '/img/closelabel.png'
+			$.facebox.settings.loadingImage = '/img/loading.gif'
+			$('[data-toggle="tooltip"]').tooltip();
+			//$('a[rel*=facebox]').facebox({ajax:"//www.facebook.com/kwnextbienesraices/",div:'#box'});
+		});
+		
+	</script>
+</body>
+</html>

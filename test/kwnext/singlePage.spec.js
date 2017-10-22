@@ -12,7 +12,7 @@ describe('SinglePage tests', () => {
         process.cwd(),
         'test',
         'kwnext',
-        'singlePage.mockWithTerreno.html'
+        'singlePage.html'
       );
       const singlePageMock = readFile(mockPath, 'utf8');
       const requestPromise = sinon.stub().returns(singlePageMock);
