@@ -7,7 +7,7 @@ const caracteristicas = '.row .fila_caracteristicas';
 module.exports = requestPromise => {
   return ({ title, link }) => {
     const options = {
-      link
+      uri: link
     };
 
     return requestPromise(options)

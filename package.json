@@ -11,23 +11,23 @@
     "dev": "nodemon src/index",
     "prepush": "node -r dotenv/config node_modules/.bin/mocha",
     "test": "nodemon -r dotenv/config --exec mocha --watch",
-    "coverage": "nyc --require dotenv/config --reporter=html mocha --timeout=3000"
+    "coverage":
+      "nyc --require dotenv/config --reporter=html mocha --timeout=3000"
   },
   "lint-staged": {
     "*.js": [
       "prettier --trailing-comma none --single-quote --write",
       "git add"
     ],
-    "*.json": [
-      "prettier --trailing-comma none --write",
-      "git add"
-    ]
+    "*.json": ["prettier --trailing-comma none --write", "git add"]
   },
   "author": "Hector Yeomans <yeomans.leonel@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "bluebird": "3.5.1",
     "cheerio": "1.0.0-rc.2",
+    "moment": "2.19.1",
+    "mongodb": "2.2.33",
     "request": "2.83.0",
     "request-promise": "4.2.2"
   },
